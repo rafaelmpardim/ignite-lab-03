@@ -5,10 +5,20 @@ export default {
   title: 'Components/Heading',
   component: Heading,
   args: {
-    children: 'Lorem ipsum',
+    children: 'Heading default',
     size: 'md'
   },
   argTypes: {
+    asChild: {
+      table: {
+        disable: true
+      }
+    },
+    className: {
+      table: {
+        disable: true
+      }
+    },
     size: {
       options: ['sm', 'md', 'lg'],
       control: {
@@ -18,30 +28,17 @@ export default {
   }
 } as Meta<HeadingProps>
 
-export const Default: StoryObj<HeadingProps> = {
-  argTypes: {
-    asChild: {
-      table: {
-        disable: true
-      }
-    }
-  }
-}
+export const Default: StoryObj<HeadingProps> = {}
 
-export const Custom: StoryObj<HeadingProps> = {
+export const CustomTag: StoryObj<HeadingProps> = {
   args: {
     asChild: true,
     children: (
-      <h1>Heading with H1</h1>
+      <h1>Heading with H1 tag</h1>
     )
   },
   argTypes: {
     children: {
-      table: {
-        disable: true
-      }
-    },
-    asChild: {
       table: {
         disable: true
       }

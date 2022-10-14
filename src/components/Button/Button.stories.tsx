@@ -5,22 +5,25 @@ export default {
   title: 'Components/Button',
   component: Button,
   args: {
-    children: 'Create account',
+    children: 'Button Default',
   },
-  argTypes: {}
-} as Meta<ButtonProps>
-
-export const Default: StoryObj<ButtonProps> = {
   argTypes: {
     asChild: {
       table: {
         disable: true
       }
+    },
+    className: {
+      table: {
+        disable: true
+      }
     }
   }
-}
+} as Meta<ButtonProps>
 
-export const Custom: StoryObj<ButtonProps> = {
+export const Default: StoryObj<ButtonProps> = {}
+
+export const CustomTag: StoryObj<ButtonProps> = {
   args: {
     asChild: true,
     children: (
@@ -29,11 +32,6 @@ export const Custom: StoryObj<ButtonProps> = {
   },
   argTypes: {
     children: {
-      table: {
-        disable: true
-      }
-    },
-    asChild: {
       table: {
         disable: true
       }

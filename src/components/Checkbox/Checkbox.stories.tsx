@@ -6,14 +6,25 @@ export default {
   title: 'Components/Checkbox',
   component: Checkbox,
   args: {},
-  argTypes: {},
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true
+      }
+    },
+    className: {
+      table: {
+        disable: true
+      }
+    }
+  },
   decorators: [
     (Story) => {
       return (
         <div className="flex gap-3 align-center">
           {Story()}
           <Text>
-            Lembre de mim por 30 dias
+            Checkbox Default
           </Text>
         </div>
       )

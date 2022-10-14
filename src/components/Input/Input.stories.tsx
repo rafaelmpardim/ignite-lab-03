@@ -7,10 +7,7 @@ export default {
   component: Input.Root,
   args: {
     children: [
-      <Input.Icon>
-        <Envelope />
-      </Input.Icon>,
-      <Input.Input placeholder="Type your e-mail address" />
+      <Input.Input placeholder="Input default" />
     ]
   },
   argTypes: {
@@ -24,10 +21,13 @@ export default {
 
 export const Default: StoryObj<InputRootProps> = {}
 
-export const WithoutIcon: StoryObj<InputRootProps> = {
+export const WithIcon: StoryObj<InputRootProps> = {
   args: {
     children: [
-      <Input.Input placeholder="Type your e-mail address" />
+      <Input.Icon>
+        <Envelope />
+      </Input.Icon>,
+      <Input.Input placeholder="Input with icon" />
     ]
   },
 }

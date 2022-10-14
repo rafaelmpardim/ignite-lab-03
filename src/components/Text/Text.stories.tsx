@@ -5,10 +5,20 @@ export default {
   title: 'Components/Text',
   component: Text,
   args: {
-    children: 'Lorem ipsum',
+    children: 'Text default',
     size: 'md'
   },
   argTypes: {
+    asChild: {
+      table: {
+        disable: true
+      }
+    },
+    className: {
+      table: {
+        disable: true
+      }
+    },
     size: {
       options: ['sm', 'md', 'lg'],
       control: {
@@ -18,30 +28,17 @@ export default {
   }
 } as Meta<TextProps>
 
-export const Default: StoryObj<TextProps> = {
-  argTypes: {
-    asChild: {
-      table: {
-        disable: true
-      }
-    }
-  }
-}
+export const Default: StoryObj<TextProps> = {}
 
-export const Custom: StoryObj<TextProps> = {
+export const CustomTag: StoryObj<TextProps> = {
   args: {
     asChild: true,
     children: (
-      <p>Text with P</p>
+      <p>Text with P tag</p>
     )
   },
   argTypes: {
     children: {
-      table: {
-        disable: true
-      }
-    },
-    asChild: {
       table: {
         disable: true
       }
